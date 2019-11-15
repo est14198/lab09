@@ -1,0 +1,14 @@
+.login__forgot {
+	display: block;
+	margin-top: 3rem;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: .75rem;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+}
+
+.login__forgot:hover {
+	color: rgb(17, 97, 237);
+}
