@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions';
 import LoginSubmit from '../components/LoginSubmit/loginSubmit';
 import LoginSignUp from '../components/LoginSignUp/loginSignUp';
 import LoginInputUser from '../components/LoginInputUser/loginInputUser';
+import LoginInputPassword from '../components/LoginInputPassword/loginInputPassword';
 
 
 storiesOf("Sign in Button", module)
@@ -31,5 +32,18 @@ storiesOf("Login user Input", module)
     ],
   })
   .add("no text", () => (
-    <LoginInputUser />
+    <LoginInputUser value={""}/>
+  ))
+  .add("with text", () => (
+    <LoginInputUser value={"This is some text to test how it would look on this username input."}/>
   ));
+
+storiesOf("Login password Input", module)
+  .addParameters({
+    backgrounds: [
+      { name: 'purple', value: '#261448', default: true },
+    ],
+  })
+  .add("hover", () => (
+    <LoginInputPassword onMouseOver={action("hovered")}/>
+  ))
